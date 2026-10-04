@@ -1,0 +1,17 @@
+{
+  "name": "claude-after-effects-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Control Adobe After Effects from Claude Code through a local ExtendScript file bridge and MCP server",
+  "engines": { "node": ">=18" },
+  "bin": { "claude-after-effects-bridge": "mcp/server.cjs" },
+  "scripts": {
+    "setup": "powershell -NoProfile -ExecutionPolicy Bypass -File Setup.ps1",
+    "status": "powershell -NoProfile -ExecutionPolicy Bypass -File Test-Connection.ps1",
+    "start": "node mcp/server.cjs",
+    "package": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Package.ps1",
+    "check": "node scripts/check.cjs",
+    "test": "node --test test/bridge.test.cjs"
+  }
+}

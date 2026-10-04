@@ -1,0 +1,22 @@
+# Runtime requests contain executable scripts, local paths, and project data.
+/local/
+/dist/
+/inbox/
+/requests/
+heartbeat.txt
+*.aep
+*.aepx
+*.aepautosave
+*.log
+*.zip
+.env
+.env.*
+node_modules/
+.venv/
+__pycache__/
+Thumbs.db
+.DS_Store
+
+# Local AI assistant settings and session data
+.claude/
+.codex/

@@ -1,0 +1,21 @@
+name: Validate After Effects bridge
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        powershell: [powershell.exe, pwsh.exe]
+        node: [20, 22]
+    env:
+      AE_TEST_POWERSHELL: ${{ matrix.powershell }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm run check
+      - run: npm test
+      - run: ./scripts/Package.ps1

@@ -1,0 +1,13 @@
+# No Python dependencies. Python is not required for installation or use.
+# The project has zero npm dependencies; package.json only holds helper scripts.
+#
+# Runtime requirements:
+#   - Windows 10/11
+#   - Adobe After Effects with ExtendScript scripting (CC 2019 / 16.0 or newer;
+#     the original connector was used with 26.0x67)
+#   - Windows PowerShell 5.1 (built into Windows) or PowerShell 7+
+#   - Node.js 18+ (https://nodejs.org), which runs the MCP server mcp/server.cjs
+#   - Claude Code CLI or desktop app (npm install -g @anthropic-ai/claude-code)
+#
+# Optional:
+#   - Git, to clone and update the repository
